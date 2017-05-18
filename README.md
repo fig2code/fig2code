@@ -125,6 +125,10 @@ This adds `largeFile.rda` to the SHA256 cache, so it can be automatically found 
 
 Configure fig2code globally for the user by changing the `~/.fig2code.yml` file, which can be overriden by a `fig2code.yml` file in the current directory. 
 
+Configuration options:
+
+- `big_file:5mb` - specifies the total max size of data files to embed. If data files exceed this limit, they won't be embedded. 
+
 ## Licence
 
-AGPL-3
+Apache-2
