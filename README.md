@@ -14,7 +14,7 @@ Fig2code supports R and R markdown. Support for python and jupyter is planed for
 
 ## Comparison with Jupyter / Markdown / Sweave
 
-Jupyter notebooks and markdown are a way to keep the code and the output together as produced on a single machine. Fig2code wraps this and other types of code into isolated runnable units that can be (re-)run and used on any machine. Compared to notebooks, fig2code also tracks the data, dependencies and any other required external files. 
+Jupyter notebooks and markdown are a way to keep the code and the output together as produced on a single machine. Fig2code wraps this and other types of code into isolated runnable units that are guaranteed to run the same on all machines. Compared to notebooks, fig2code also tracks the data, dependencies and any other required external files. 
 
 ## When to use
 
@@ -39,6 +39,8 @@ This is going to do the following:
 - create an HTML version of the script output, e.g. If the script outputs `myFigure.png`, it will create `myFigure.html`. Meta information needed to re-run the figure, such as the Dockerfile, code and (small) data is recorded in hidden HTML tags. This meta information is designed to enlarge the file only minimally. Large files are recorded by their SHA256 value.
 
 When opened in a browser the fig2code output HTML looks like a figure, but contains the full information need to re-run the code on any computer.
+
+You can also access this function from the Rstudio fig2code add-in. 
 
 For most users, this is the only command that you will need to know. 
 
