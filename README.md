@@ -134,6 +134,11 @@ fig2code add largeFile.rda
 
 This adds `largeFile.rda` to the SHA256 cache, so it can be automatically found when needed to re-run a figure.  
 
+## Handling of data files
+
+Scripts might output data files such as CSV or RData files. These files are not useful when embedded into HTML, so for these, the provenance information is stored in the central cache repository. Each output is identified with its path and SHA256, and all the files that would be normally embedded are attached to this hash. These attached files can themselves be hashes to avoid duplication in the repository. 
+
+Using fig2code along the whole pipeline then enables full provenance, from the initial raw files to the final figure. 
 
 ## Configuration
 
