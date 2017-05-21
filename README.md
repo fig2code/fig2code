@@ -134,6 +134,16 @@ fig2code add largeFile.rda
 
 This adds `largeFile.rda` to the SHA256 cache, so it can be automatically found when needed to re-run a figure.  
 
+#### 7. Create the figure remotely
+
+You can create the figure remotely (e.g. in the cloud). To do so you will need to have fig2code and Docker installed on the remote machine. 
+
+```
+fig2core run-remote <server address> myScript.R . 
+```
+
+When using this command fig2code will use SSH to connect to the remote server and run the `myScript.R` command. The last argument is the path of the context directory, all files in this directory will be uploaded unless they already exist at the destination server.
+
 ## Handling of data files
 
 Scripts might output data files such as CSV or RData files. These files are not useful when embedded into HTML, so for these, the provenance information is stored in the central cache repository. Each output is identified with its path and SHA256, and all the files that would be normally embedded are attached to this hash. These attached files can themselves be hashes to avoid duplication in the repository. 
