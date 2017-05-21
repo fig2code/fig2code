@@ -139,7 +139,7 @@ This adds `largeFile.rda` to the SHA256 cache, so it can be automatically found 
 You can create the figure remotely (e.g. in the cloud). To do so you will need to have fig2code and Docker installed on the remote machine. 
 
 ```
-fig2core run-remote <server address> myScript.R . 
+fig2core remote-run <server address> myScript.R . 
 ```
 
 When using this command fig2code will use SSH to connect to the remote server and run the `myScript.R` command. The last argument is the path of the context directory, all files in this directory will be uploaded unless they already exist at the destination server.
