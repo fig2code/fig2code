@@ -1,28 +1,32 @@
 # Fig2code: create runnable, reproducible figures
 
-Fig2code is a free, open-source tool to create figures that contain all the information needed to run them.  
+Fig2code is a free, open-source tool to create figures that contain all the information needed to run and reproduce them.
 
 ## Motivation
 
-A typical figure shared within a company, or in a scientific manuscript is not backed up with the code, data and environment that created it. This can lead to loss in productivity, wrong conclusions and knowledge being trapped on personal computers.  
+A typical figure shared within a company, or within a scientific manuscript is not backed up with the code, data and environment that created it. This makes it more difficult to rigorously capture and communicate research. As a consequence, this can lead to wrong conclusions and knowledge being trapped on personal computers.
 
 Fig2code's goal is to make it easy for data scientists of all skill levels to create runnable, reproducible figures with minimal effort. 
 
-Fig2code is based on Docker, but no knowledge of Docker is needed to use it. It abstracts all the Docker details to focus on the operations meaningful for data analysis workflows. 
+Fig2code is based on Docker, but no knowledge of Docker is needed to use it. It abstracts all the Docker details to focus on the operations meaningful when performing data analysis or machine learning.
 
 Fig2code supports R and R markdown. Support for python and jupyter is planed for the near future. 
 
+*Fig2code is in its early stages, if you are interested in contributing, please contact Robert at robert@dataprogrammers.net*
+
 ## Comparison with Jupyter / Markdown / Sweave
 
-Jupyter notebooks and markdown are a way to keep the code and the output together as produced on a single machine. Fig2code wraps this and other types of code into isolated runnable units that are guaranteed to run the same on all machines. Compared to notebooks, fig2code also tracks the data, dependencies and any other required external files. 
+Jupyter notebooks and markdown are a way to keep the code and the output together as produced on a single machine. Fig2code wraps this and other types of code into isolated runnable units that are guaranteed to run the same on all machines. Compared to notebooks, fig2code also tracks the data, dependencies and any other required external files on a per-output basis.
 
 ## When to use
 
-Continue using R interactively to create analysis and experiment. Once you are ready to produce the final figures use fig2code to create them, so they are backed up by code, data and environment.  Share your final figures with collaborators and the public. 
+The goal of fig2code is to be as unobtrusive as possible. You can continue using R interactively to create analysis and experiment. Once you are ready to produce the final figures use fig2code to create them, so they are backed up by code, data and environment.  Share your final figures with collaborators and the public.
 
 Fig2code is not meant as a replacement for the R and python packaging systems. If the primary purpose of your code is to be distributed as a module to be re-used by others, please use the existing packaging systems. 
 
 ## Usage
+
+The primary usage is through the command line, but an Rstudio plugin is also planned for the near future. 
 
 ### Basic usage
 
